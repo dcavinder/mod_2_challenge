@@ -98,6 +98,9 @@ main {
 }
 
 .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 4%;
     padding: 1%;
     height: 80%;
@@ -107,19 +110,22 @@ main {
     color: var(--light);
 }
 
-.projects .small-projects{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
+.projects ul {
+    list-style-type: none;
+    width: 20%;
+    margin: 0 5% 0;
 }
 
-.projects .small-projects .small{
+.projects ul li .small{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     border: 3px solid var(--dark);
     margin: .5%;
     max-height: 100px;
     max-width: 150px;
 }
-.projects .small-projects .small:hover {
+.projects ul li .small:hover {
     transform: scale(1.25);
     box-shadow: 5px 5px 5px var(--dark);
     transition: all 0.5s ease-in-out;
@@ -127,8 +133,8 @@ main {
 
 .projects .project1 {
     border: 3px solid var(--dark);
-    max-height: 700px;
-    max-width: 1000px;
+    margin: 0 5% 0;
+    width: 90%;
 } 
 
 .projects .project1:hover {
